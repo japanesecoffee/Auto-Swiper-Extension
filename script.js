@@ -5,7 +5,7 @@ var swiper = setInterval(function() {
 
 	setTimeout(function() {
 		var profileBio = document.getElementsByClassName("P(16px) profileCard__bio Ta(start) Us(t) C($c-secondary) BreakWord Whs(pl) Fz($ms)")[0];
-		var profileText = profileBio.innerText;
+		var profileText = profileBio != null ? profileBio.innerText : "";
 		console.log("Reading bio... \n"+profileText);
 
 		profileText.toLowerCase();
@@ -21,3 +21,5 @@ var swiper = setInterval(function() {
 		}
 	}, 2000);
 }, 4000);
+
+//clearInterval(swiper);
