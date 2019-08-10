@@ -12,5 +12,19 @@
 		"default_icon": "tinderswiper16.png",
 		"default_popup": "popup.html",
 		"default_title": "Tinder Auto Swiper"
-	}
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://tinder.com/app/recs"],
+			"js": ["content.js", "jquery-3.4.1.min.js"]
+		}
+	],
+	"permissions": [
+		"tabs",
+		"https://tinder.com/app/recs"
+	]
 }
