@@ -5,6 +5,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	if(request.msg == "searchForWord") {
 		var word = request.submitted;
 		word = String(word).toLowerCase();
+		console.log("keyword: " + word);
 
 		var swiper = setInterval(function() {
 			//used Chrome DevTools to find class names for profile button
@@ -32,4 +33,4 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 		//clearInterval(swiper);
 	}
-})
+});
